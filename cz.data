@@ -1,0 +1,6 @@
+classes=5
+train=/home/shu/darknet/train/test1_train.txt
+valid=/home/shu/darknet/train/test1_train.txt
+names=/home/cz/yolov3/classes.name
+backup=/home/shu/darknet/train/backup_test1
+

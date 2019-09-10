@@ -45,9 +45,13 @@ pip3 install -r requirements.txt
 
 如图为训练loss损失曲线。
 
-# Test
+# Dataset
 
+我们收集了一千多张常见的垃圾种类数据集，包括金属，塑料，纸质，玻璃，通过图像增广，获得了几万张图片。
 
+![](train_batch0.jpg)
+
+每类图片有三百张左右。
 
 # 
 
