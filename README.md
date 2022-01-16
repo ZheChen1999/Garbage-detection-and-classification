@@ -1,39 +1,34 @@
 # Introduction
 
 
-
-
-
-本项目是基于YOLOv3的5G嵌入式智能分类垃圾桶系统。该垃圾桶具有两个功能选项，可以通过连接本地USB摄像头获取图像，也可以通过5G网络获取网络摄像头的图像。需要预先获取5G摄像头的IP地址以及端口。
+This project is a 5G embedded intelligent garbage can classification system based on YOLOv3.  The bin has two options, which can be connected to a local USB camera to get images, or a 5G network to get images from a webcam.  You need to obtain the IP address and port of the 5G camera in advance.  
 
 
 
 ![](/picture/2.png)
 
-以上为垃圾桶的简易检测界面。
-
+The above is the simple detection interface of the trash can.
 # Requirements
 
-| 操作系统 | Ubuntu 18.04 LTS                            |
+| operating system | Ubuntu 18.04 LTS                            |
 | -------- | ------------------------------------------- |
-| CPU      | Intel i7-6700U，8GB运行内存，可加速至3.5GHZ |
-| GPU      | GTX 1080Ti，12GB显存                        |
-| 开发平台 | pycharm + keil5 (python3 + c51)             |
-| 开发板   | STC89C52RC                                  |
+| CPU      | Intel i7-6700U + 8GB                         |
+| GPU      | GTX 1080Ti，12GB RAM                       |
+| development platform | pycharm + keil5 (python3 + c51)             |
+| development board   | STC89C52RC                                  |
 
-关于python依赖库安装使用如下命令：
+For python dependency library installation use the following command:
 
 ```python
 pip3 install -r requirements.txt
 ```
 
-如需移植到自己的电脑，需要修改cap.py文件里面的相关路径名，以及USB串口的路径。
-
-需预先将单片机代码烧录进51单片机中，如何通过串口连接服务器。
+If you want to port to your own computer, you need to modify the relevant pathname in the cap.py file, and the PATH of the USB serial port.  
+It is necessary to burn the single-chip code into 51 single-chip computer in advance, how to connect the server through serial port.  
 
 ![](/picture/1.jpg)
 
-如图为整个系统的框架图，需要用到两个数码舵机和一个工业摄像头，以及一个5V的稳压模块，和一个电源模块，以及一个单片机最小模块。
+Figure is the frame diagram of the whole system, which needs two digital steering gear, an industrial camera, a 5V voltage stabilizer module, a power supply module and a single chip microcomputer minimum module.  
 
 # Training
 
@@ -43,15 +38,15 @@ pip3 install -r requirements.txt
 
 ![](/picture/chart.png)
 
-如图为训练loss损失曲线。
+Figure is the training loss curve.
 
 # Dataset
 
-我们收集了一千多张常见的垃圾种类数据集，包括金属，塑料，纸质，玻璃，通过图像增广，获得了几万张图片。
+We collected more than 1,000 data sets of common garbage categories, including metal, plastic, paper, and glass, and obtained tens of thousands of images through image augmentation.  
 
 ![](train_batch0.jpg)
 
-每类图片有三百张左右。
+There are about 300 pictures in each category.
 
 # 
 
